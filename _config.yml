@@ -1,0 +1,1 @@
+exclude: ['Gemfile*','gulpfile.js','lib/*','node_modules/*','package.json','src/*','*.md']

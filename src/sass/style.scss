@@ -1,0 +1,94 @@
+@import '../../lib/normalize.css/normalize.css';
+
+/*! raearnold.com v.0.0.1 */
+$brand-primary: #2c2233;
+$gray-lighter: #ddd;
+$gray-light: #aaa;
+$gray: #999;
+$gray-dark: #666;
+$gray-darker: #222;
+
+$font-family: 'Open Sans', 'Helvetica', sans-serif;
+$headings-font-family: 'Reenie Beanie', 'Open Sans', 'Helvetica', sans-serif;
+
+$social-media-icon-size: 2em;
+
+body {
+	color: $gray-darker;
+	font: 100%/1.575 $font-family;
+}
+
+//== HEADER
+header {
+	margin-bottom: 2em;
+	text-align: center;
+	a { color: inherit; text-decoration: inherit; }
+}
+.site-name {
+	font: 2.5em/1 $headings-font-family;
+	margin-bottom: 0;
+	span {
+		color: $gray;
+		display: inline-block;
+		animation: letter-in 1s ease-in 1.5s 1 both;
+	}
+}
+.tagline {
+	font-size: 1em;
+	font-weight: normal;
+	margin: 0;
+}
+
+.social-media-links {
+	background-color: $brand-primary;
+	list-style: none;
+	padding: 0;
+	box-shadow: 0px 1px 5px $gray;
+
+	li {
+		display: inline-block;
+		padding: .5em 1em;
+		line-height: 1;
+	}
+	a {
+		color: #fff;
+		opacity: .9;
+		display: inline-block;
+		height: $social-media-icon-size;
+		width: $social-media-icon-size;
+		overflow: hidden;
+		vertical-align: middle;
+		transition: transform .5s, opacity .5s;
+		&:hover {
+			opacity: 1;
+			transform: scale(1.1);
+		}
+	}
+	.fa { display: block; }
+	.fa:before {
+		font-size: $social-media-icon-size;
+	}
+}
+
+//= MAIN CONTENT
+main {
+	text-align: center;
+}
+
+// Make it visually non-linkish until something more is done with this section
+.affiliated-project a {
+	color: inherit;
+	text-decoration: none;
+}
+
+// Animating things
+@keyframes letter-in {
+	0% {
+		font-size:0;
+		opacity: 0;
+	}
+	100% {
+		font-size: inherit;
+		opacity: 1;
+	}
+}
